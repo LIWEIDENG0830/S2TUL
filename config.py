@@ -5,18 +5,8 @@ from dataclasses import dataclass
 class FoursquareConfig:
 
     seed: int = 2021
-    #datadir: str = "../foursquare/foursquare_TKY/processed_allday_norec/108/"
-    # datadir: str = "../foursquare/foursquare_TKY/processed_allday_norec/209/"
-    datadir: str = "../foursquare/foursquare_NYC/processed_allday_norec/108/"
-    # datadir: str = "../foursquare/foursquare_NYC/processed_allday_norec/209/"
-    #datadir: str = "../gowalla/gowalla/processed_allday_norec/209/"
-    #datadir: str = "../gowalla/gowalla/processed_allday_norec/108/"
-    # datadir: str = "../brightkite/brightkite/processed_allday_norec/108/"
-    #datadir: str = "../brightkite/brightkite/processed_allday_norec/209/"
-    # datadir: str = "/data/shgpu/TUL/processed/gowalla/300/"
-    #datadir: str = "../gowalla/processed_allday/1000_randomly/"
-    #datadir: str = "../gowalla/processed_allday/2000_randomly/"
-    pretrain_loc_path: str = "./pretrain/word2vec/foursquare_32_108users.txt"
+    datadir: str = "./data/foursquare/foursquare_NYC/processed_allday_norec/108/"
+    pretrain_loc_path: str = "./pretrain/word2vec/foursquare_32_108users.txt"   # Not Used
     # model parameters
     hidden_size: int = 32
     dropout: float = 0.1
@@ -35,10 +25,10 @@ class FoursquareConfig:
     # To demonstrate the effectiveness for data sparsity
     m: float = 1
     # for TULLSTM_main
-    model_type: str = "BiLSTM"
+    model_type: str = "BiLSTM"      # Not used
     # spatial threshold, meters
     # spatio: float = 1500        # gowalla
     # spatio: float = 700      # brightkite
     spatio: float = 500        # foursquare
     # within 1 hour
-    temporal: float = 1
+    temporal: float = 5
